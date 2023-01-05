@@ -48,34 +48,7 @@ final class ServerRequestMarshal
 			$headers = getallheaders();
 		}
 		if (!$headers) {
-			$headers = [];
-			foreach ($serverParams as $key => $value) {
-				if (!is_string($key)) {
-					continue;
-				}
-
-				if ($value === '') {
-					continue;
-				}
-
-				// Apache prefixes environment variables with REDIRECT_
-				// if they are added by rewrite rules
-				if (str_starts_with($key, 'REDIRECT_')) {
-					$key = substr($key, 9);
-
-					// We will not overwrite existing variables with the
-					// prefixed versions, though
-					if (array_key_exists($key, $serverParams)) {
-						continue;
-					}
-				}
-
-				if (str_starts_with($key, 'HTTP_')) {
-					$name = strtr(strtolower(substr($key, 5)), '_', '-');
-					$headers[$name] = $value;
-					continue;
-				}
-			}
+			$headers = $this->parseHeaders($serverParams);
 		}
 
 		$request = new ServerRequest(
@@ -91,5 +64,41 @@ final class ServerRequestMarshal
 			->withParsedBody($_POST)
 			->withQueryParams($_GET)
 			->withCookieParams($_COOKIE);
+	}
+
+	/**
+	 * @param array<string, scalar> $serverParams
+	 * @return array<string, scalar>
+	 */
+	private function parseHeaders(array $serverParams): array
+	{
+		$headers = [];
+		foreach ($serverParams as $key => $value) {
+			if (!is_string($key)) {
+				continue;
+			}
+
+			if ($value === '') {
+				continue;
+			}
+
+			// Apache prefixes environment variables with REDIRECT_
+			// if they are added by rewrite rules
+			if (str_starts_with($key, 'REDIRECT_')) {
+				$key = substr($key, 9);
+
+				// We will not overwrite existing variables with the
+				// prefixed versions, though
+				if (array_key_exists($key, $serverParams)) {
+					continue;
+				}
+			}
+
+			if (str_starts_with($key, 'HTTP_')) {
+				$name = strtr(strtolower(substr($key, 5)), '_', '-');
+				$headers[$name] = $value;
+			}
+		}
+		return $headers;
 	}
 }
