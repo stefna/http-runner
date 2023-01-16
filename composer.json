@@ -1,5 +1,5 @@
 {
-	"name": "stefna/moya-http",
+	"name": "stefna/http-runner",
 	"type": "library",
 	"license": "MIT",
 	"authors": [
@@ -14,12 +14,34 @@
 		"php": "^8.2",
 		"psr/log": "^3.0",
 		"psr/http-message": "^1.0.1",
+		"psr/http-factory": "^1.0.1",
 		"psr/http-server-middleware": "^1.0.1",
-		"psr/http-server-handler": "^1.0.1"
+		"psr/http-server-handler": "^1.0.1",
+		"nyholm/psr7": "^1.5.1"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "dev-master",
+		"stefna/codestyle": "^1.12",
+		"phpstan/phpstan": "^1.8",
+		"bnf/phpstan-psr-container": "^1.0",
+		"phpunit/phpunit": "^9.5.25",
+		"phpstan/phpstan-phpunit": "^1.1",
+		"tomasvotruba/type-coverage": "^0.0.7",
+		"phpstan/extension-installer": "^1.2"
 	},
 	"autoload": {
 		"psr-4": {
 			"Stefna\\Http\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Stefna\\Http\\Tests\\": "tests/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"phpstan/extension-installer": true
 		}
 	}
 }
