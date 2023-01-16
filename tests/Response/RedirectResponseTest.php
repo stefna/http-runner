@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Tests\Response;
+namespace Stefna\Http\Tests\Response;
 
-use Moya\Http\Response\RedirectResponse;
-use Moya\Http\Response\Status;
+use Stefna\Http\Response\RedirectResponse;
+use Stefna\Http\Response\Status;
 use PHPUnit\Framework\TestCase;
 
 final class RedirectResponseTest extends TestCase

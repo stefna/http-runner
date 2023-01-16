@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Tests\ResponseHandler;
+namespace Stefna\Http\Tests\ResponseHandler;
 
-use Moya\Http\ResponseHandler\CliResponseHandler;
+use Stefna\Http\ResponseHandler\CliResponseHandler;
 use Nyholm\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 

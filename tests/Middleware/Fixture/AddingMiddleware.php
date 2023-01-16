@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Tests\Middleware\Fixture;
+namespace Stefna\Http\Tests\Middleware\Fixture;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

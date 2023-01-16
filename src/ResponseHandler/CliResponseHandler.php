@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\ResponseHandler;
+namespace Stefna\Http\ResponseHandler;
 
 use Psr\Http\Message\ResponseInterface;
 

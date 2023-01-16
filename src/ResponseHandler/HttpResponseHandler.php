@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\ResponseHandler;
+namespace Stefna\Http\ResponseHandler;
 
-use Moya\Http\ResponseHandler\Exception\HeadersAlreadySentException;
+use Stefna\Http\ResponseHandler\Exception\HeadersAlreadySentException;
 use Psr\Http\Message\ResponseInterface;
 
 final class HttpResponseHandler implements ResponseHandler

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Util\Exception;
+namespace Stefna\Http\Util\Exception;
 
 final class RequestAttributeNotFound extends \InvalidArgumentException
 {

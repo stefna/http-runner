@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Tests\Response;
+namespace Stefna\Http\Tests\Response;
 
-use Moya\Http\Response\Status;
-use Moya\Http\Response\TextResponse;
+use Stefna\Http\Response\Status;
+use Stefna\Http\Response\TextResponse;
 use PHPUnit\Framework\TestCase;
 
 final class TextResponseTest extends TestCase

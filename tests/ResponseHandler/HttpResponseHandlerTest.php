@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Tests\ResponseHandler;
+namespace Stefna\Http\Tests\ResponseHandler;
 
-use Moya\Http\ResponseHandler\Exception\HeadersAlreadySentException;
-use Moya\Http\ResponseHandler\HttpResponseHandler;
-use Moya\Http\ResponseHandler\ResponseHandler;
-use Moya\Http\Tests\ResponseHandler\Mock\MockData;
+use Stefna\Http\ResponseHandler\Exception\HeadersAlreadySentException;
+use Stefna\Http\ResponseHandler\HttpResponseHandler;
+use Stefna\Http\ResponseHandler\ResponseHandler;
+use Stefna\Http\Tests\ResponseHandler\Mock\MockData;
 use Nyholm\Psr7\Response;
 use Nyholm\Psr7\Stream;
 use PHPUnit\Framework\TestCase;
@@ -14,10 +14,10 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 use function array_filter;
 use function fopen;
-use function Moya\Http\ResponseHandler\header;
-use function Moya\Http\ResponseHandler\headers_list;
-use function Moya\Http\ResponseHandler\http_response_code;
-use function Moya\Http\ResponseHandler\http_response_status_line;
+use function Stefna\Http\ResponseHandler\header;
+use function Stefna\Http\ResponseHandler\headers_list;
+use function Stefna\Http\ResponseHandler\http_response_code;
+use function Stefna\Http\ResponseHandler\http_response_status_line;
 use function implode;
 use function is_int;
 use function preg_replace;

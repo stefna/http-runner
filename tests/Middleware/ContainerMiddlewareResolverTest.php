@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Tests\Middleware;
+namespace Stefna\Http\Tests\Middleware;
 
 use Moya\DependencyInjection\Container;
 use Moya\DependencyInjection\Definition\DefinitionArray;
-use Moya\Http\Middleware\ContainerMiddlewareResolver;
-use Moya\Http\Tests\Middleware\Fixture\AddingMiddleware;
+use Stefna\Http\Middleware\ContainerMiddlewareResolver;
+use Stefna\Http\Tests\Middleware\Fixture\AddingMiddleware;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Server\MiddlewareInterface;

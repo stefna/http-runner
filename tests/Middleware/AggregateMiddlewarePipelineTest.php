@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Tests\Middleware;
+namespace Stefna\Http\Tests\Middleware;
 
-use Moya\Http\Middleware\AggregateMiddlewarePipeline;
-use Moya\Http\Middleware\SimpleMiddlewarePipeline;
-use Moya\Http\Tests\Middleware\Fixture\AddingMiddleware;
+use Stefna\Http\Middleware\AggregateMiddlewarePipeline;
+use Stefna\Http\Middleware\SimpleMiddlewarePipeline;
+use Stefna\Http\Tests\Middleware\Fixture\AddingMiddleware;
 use PHPUnit\Framework\TestCase;
 
 final class AggregateMiddlewarePipelineTest extends TestCase

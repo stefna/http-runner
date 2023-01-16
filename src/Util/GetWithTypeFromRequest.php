@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Util;
+namespace Stefna\Http\Util;
 
-use Moya\Http\Util\Exception\RequestAttributeNotFound;
+use Stefna\Http\Util\Exception\RequestAttributeNotFound;
 use Psr\Http\Message\ServerRequestInterface;
 
 trait GetWithTypeFromRequest

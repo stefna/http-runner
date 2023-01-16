@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Middleware;
+namespace Stefna\Http\Middleware;
 
 use Psr\Container\ContainerInterface;
 use Psr\Http\Server\MiddlewareInterface;

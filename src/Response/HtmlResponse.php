@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Response;
+namespace Stefna\Http\Response;
 
 use Nyholm\Psr7\Stream;
 use Psr\Http\Message\ResponseInterface;

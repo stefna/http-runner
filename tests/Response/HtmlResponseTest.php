@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Tests\Response;
+namespace Stefna\Http\Tests\Response;
 
-use Moya\Http\Response\HtmlResponse;
-use Moya\Http\Response\Status;
+use Stefna\Http\Response\HtmlResponse;
+use Stefna\Http\Response\Status;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\StreamInterface;
 

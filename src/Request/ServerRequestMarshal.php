@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Request;
+namespace Stefna\Http\Request;
 
 use Nyholm\Psr7\ServerRequest;
 use Nyholm\Psr7\Uri;

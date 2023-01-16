@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Tests\Middleware;
+namespace Stefna\Http\Tests\Middleware;
 
-use Moya\Http\Middleware\MiddlewarePipeline;
-use Moya\Http\Middleware\Runner;
-use Moya\Http\Middleware\SimpleMiddlewarePipeline;
-use Moya\Http\Tests\Middleware\Fixture\AddingMiddleware;
-use Moya\Http\Tests\Middleware\Fixture\RespondingMiddleware;
+use Stefna\Http\Middleware\MiddlewarePipeline;
+use Stefna\Http\Middleware\Runner;
+use Stefna\Http\Middleware\SimpleMiddlewarePipeline;
+use Stefna\Http\Tests\Middleware\Fixture\AddingMiddleware;
+use Stefna\Http\Tests\Middleware\Fixture\RespondingMiddleware;
 use Nyholm\Psr7\Response;
 use Nyholm\Psr7\ServerRequest;
 use PHPUnit\Framework\TestCase;

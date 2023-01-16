@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\Tests\ResponseHandler\Mock;
+namespace Stefna\Http\Tests\ResponseHandler\Mock;
 
 final class MockData
 {

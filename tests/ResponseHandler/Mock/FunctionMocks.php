@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Moya\Http\ResponseHandler;
+namespace Stefna\Http\ResponseHandler;
 
-use Moya\Http\Tests\ResponseHandler\Mock\MockData;
+use Stefna\Http\Tests\ResponseHandler\Mock\MockData;
 
 use function array_key_exists;
 use function explode;
