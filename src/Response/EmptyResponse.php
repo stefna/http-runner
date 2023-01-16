@@ -3,7 +3,6 @@
 namespace Stefna\Http\Response;
 
 use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\UriInterface;
 
 final class EmptyResponse implements ResponseInterface
 {

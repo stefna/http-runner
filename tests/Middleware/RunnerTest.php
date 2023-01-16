@@ -2,6 +2,7 @@
 
 namespace Stefna\Http\Tests\Middleware;
 
+use Nyholm\Psr7\Factory\Psr17Factory;
 use Stefna\Http\Middleware\MiddlewarePipeline;
 use Stefna\Http\Middleware\Runner;
 use Stefna\Http\Middleware\SimpleMiddlewarePipeline;
@@ -19,7 +20,10 @@ final class RunnerTest extends TestCase
 {
 	public function testDefaultResponseIs404(): void
 	{
-		$runner = new Runner($this->createMock(MiddlewarePipeline::class));
+		$runner = new Runner(
+			$this->createMock(MiddlewarePipeline::class),
+			new Psr17Factory(),
+		);
 
 		$response = $runner->handle($this->createMock(ServerRequestInterface::class));
 
@@ -44,7 +48,10 @@ final class RunnerTest extends TestCase
 			$handler
 		);
 
-		$runner = new Runner($pipeline);
+		$runner = new Runner(
+			$pipeline,
+			new Psr17Factory(),
+		);
 		$runner->handle($request);
 	}
 
@@ -64,7 +71,10 @@ final class RunnerTest extends TestCase
 			$neverMiddleware,
 		);
 
-		$runner = new Runner($pipeline);
+		$runner = new Runner(
+			$pipeline,
+			new Psr17Factory(),
+		);
 		$this->assertSame($response, $runner->handle($request));
 	}
 }

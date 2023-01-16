@@ -2,7 +2,7 @@
 
 namespace Stefna\Http\Middleware;
 
-use Nyholm\Psr7\Response;
+use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -12,6 +12,7 @@ final class Runner implements RequestHandlerInterface
 {
 	public function __construct(
 		private readonly MiddlewarePipeline $middlewarePipeline,
+		private readonly ResponseFactoryInterface $responseFactory,
 		private readonly MiddlewareResolver $middlewareResolver = new NullMiddlewareResolver(),
 	) {}
 
@@ -21,7 +22,7 @@ final class Runner implements RequestHandlerInterface
 
 		// It there's no middlewares just return 404
 		if ($middleware === null) {
-			return new Response(404);
+			return $this->responseFactory->createResponse(404);
 		}
 
 		if ($middleware instanceof MiddlewareInterface) {
