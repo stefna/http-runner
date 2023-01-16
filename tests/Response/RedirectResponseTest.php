@@ -38,7 +38,7 @@ final class RedirectResponseTest extends TestCase
 
 	public function testWithStatus(): void
 	{
-		$response = $this->response->withStatus(Status::MovedPermanently->value );
+		$response = $this->response->withStatus(Status::MovedPermanently->value);
 		$this->assertNotSame($this->response, $response);
 		$this->assertSame(Status::MovedPermanently->value, $response->getStatusCode());
 		$this->assertSame('Moved Permanently', $response->getReasonPhrase());

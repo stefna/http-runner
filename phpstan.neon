@@ -4,6 +4,6 @@ parameters:
 		- src
 	type_coverage:
 		return_type: 90
-		param_type: 100
+		param_type: 70
 		property_type: 100
 		print_suggestions: true

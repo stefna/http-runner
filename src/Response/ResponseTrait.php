@@ -10,19 +10,19 @@ trait ResponseTrait
 
 	protected Status $statusCode = Status::NoContent;
 
-	public function getStatusCode()
+	public function getStatusCode(): int
 	{
 		return $this->statusCode->value;
 	}
 
-	public function withStatus($code, $reasonPhrase = '')
+	public function withStatus($code, $reasonPhrase = ''): static
 	{
 		$clone = clone $this;
 		$clone->statusCode = Status::from($code);
 		return $clone;
 	}
 
-	public function getReasonPhrase()
+	public function getReasonPhrase(): string
 	{
 		return $this->statusCode->getPhrase();
 	}
