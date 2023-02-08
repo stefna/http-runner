@@ -1,5 +1,9 @@
 # Http
 
+[![Build Status](https://github.com/stefna/http-runner/actions/workflows/continuous-integration.yml/badge.svg?branch=main)](https://github.com/stefna/http-runner/actions/workflows/continuous-integration.yml)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/stefna/http-runner.svg)](https://packagist.org/packages/stefna/http-runner)
+[![Software License](https://img.shields.io/github/license/stefna/http-runner.svg)](LICENSE)
+
 This package provides a psr-15 implementation with helpers
 
 ## Requirements
