@@ -55,7 +55,7 @@ final class ServerRequestMarshal
 			(string)($serverParams['REQUEST_METHOD'] ?? 'GET'),
 			$uriObj,
 			$headers,
-			'php://input',
+			fopen('php://input', 'r'), // @phpstan-ignore-line
 			'1.1',
 			$serverParams,
 		);
